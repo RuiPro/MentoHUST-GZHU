@@ -1,0 +1,12 @@
+#!/bin/sh /etc/rc.common
+# /init.d/mentohust
+START=97
+start()
+{
+     mentohust -daemonize1
+     echo "==============================================Ruijie login is now running!=============================================="
+}
+stop()
+{
+     echo "==============================================Ruijie login is now not running!=============================================="
+}
