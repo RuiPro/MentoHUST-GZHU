@@ -1,6 +1,7 @@
 # mentohust
 在网上下载的mentohust不一定能够在GZHU进行认证，但是这个版本可以
 适用于MT7620系列处理器，也就是mips64架构的处理器才能够使用。
+
 ### 使用方法：
 
 1、将[mentohust](bin/mentohust)上载到\bin\中
@@ -13,8 +14,6 @@ mentohust
 mentohust -k
 ```
 
-配置清单
-
 3、用SSH软件登录路由器后台
 
 4、编辑配置文件
@@ -25,15 +24,18 @@ cd /etc
 vi mentohust.conf
 ```
 进行配置（别忘了wq!）
+*配置文件说明：[配置清单.txt](/)
 
-
-修改完成配置后，即可运行：
+修改完成配置后，即可在后台运行：
 ```
 mentohust -b 1
 ```
-
 
 ### 注意事项：
 * 输入：mentohust -h可查看帮助
 
 * 在路由器管理界面确认wan口是否为DHCP客户端模式
+
+### 自启动
+
+将[mentohust](/etc/init.d)上传至/etc/init.d目录下，设置文件权限为0755。登录luci后台，在系统-启动项下找到mentohust启动即可
