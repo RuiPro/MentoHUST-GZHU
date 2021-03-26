@@ -1,0 +1,22 @@
+配置清单：
+Username=你的学号
+Password=你的密码
+Nic=你的网卡，通常为eth0.2
+IP=
+Mask=255.255.255.0
+Gateway=
+DNS=0.0.0.0
+PingHost=0.0.0.0
+MaxRetries=0
+Timeout=8
+EchoInterval=0
+RestartWait=15
+RestartOnLogOff=1
+MaxFail=2
+StartMode=1
+DhcpMode=1
+DaemonMode=2
+Version=0.00
+DataFile=/etc/mentohust/
+DhcpScript=udhcpc -i eth0.2
+
