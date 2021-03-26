@@ -18,12 +18,12 @@ mentohust -k
 
 4、编辑配置文件
 你可以直接连接scp对/etc/mentohust.conf进行编辑
-也可以连接ssh：
+也可以连接ssh进行配置（别忘了wq!）：
 ```
 cd /etc
 vi mentohust.conf
 ```
-进行配置（别忘了wq!）
+
 *配置文件说明：[配置清单.txt](/)
 
 修改完成配置后，即可在后台运行：
