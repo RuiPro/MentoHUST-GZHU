@@ -36,6 +36,25 @@ mentohust -b 1
 
 * 在路由器管理界面确认wan口是否为DHCP客户端模式
 
-### 自启动
+### 自启动：
 
 将[mentohust](/etc/init.d)上传至/etc/init.d目录下，设置文件权限为0755。登录luci后台，在系统-启动项下找到mentohust启动即可
+
+### 多拨：
+* 此方式需要你的固件支持虚拟wan！
+如果你的路由器没有这个服务且ROM空间充足，你可以通过安装软件包来实现。
+你可以通过后台通过命令来安装
+```
+opkg updata
+opkg -force-checksum install luci-app-syncdial
+```
+也可以在luci后台-系统-软件包搜索syncdial进行安装
+更多地，你可以直接上传本地软件包进行安装
+
+安装成功后，你可以在luci后台-网络中找到虚拟wan
+
+在虚拟wan目录下，设置虚拟wan数量为1，勾选使用旧的macvlan创建方式，然后开启
+* 进过测试，gzhu通过设置两个虚拟wan口网速最高可达到11mb/s下载，1.1mb/上传，但非常不稳定，且经常掉ping。比较稳定的虚拟wan个数是1，也就是双拨。尽管如此，掉ping的现象仍然存在(待研究）
+
+开启虚拟wan后，在网络-接口页面可以看到多出来一个Vwan1(macvlan)，设置该接口为dhcp客户端模式，并应用。
+
