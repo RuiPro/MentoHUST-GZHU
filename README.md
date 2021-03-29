@@ -70,7 +70,6 @@ mentohust -u账号 -p密码 -daemonize1 --pid-file none -nmacvlan1
 等到弹出余额过一会即可多拨成功
 
 * 多拨不能开机自启，必须手动配置Vwan
-* 
 * 可以使用top命令来查看进程，也可以随时kill pid
 
 
