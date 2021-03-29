@@ -42,14 +42,18 @@ mentohust -b 1
 
 ### 多拨：
 * 此方式需要你的固件支持虚拟wan！
+
 如果你的路由器没有这个服务且ROM空间充足，你可以通过安装软件包来实现。
-你可以通过后台通过命令来安装
+
+你可以通过后台通过命令来安装：
+
 ```
 opkg updata
 opkg -force-checksum install luci-app-syncdial
 ```
-也可以在luci后台-系统-软件包搜索syncdial进行安装
-更多地，你可以直接上传本地软件包进行安装
+也可以在luci后台-系统-软件包搜索syncdial进行安装。
+
+更多地，你可以直接上传本地软件包进行安装。
 
 安装成功后，你可以在luci后台-网络中找到虚拟wan
 
