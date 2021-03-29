@@ -59,7 +59,8 @@ opkg -force-checksum install luci-app-syncdial
 
 
 在虚拟wan目录下，设置虚拟wan数量为1，勾选使用旧的macvlan创建方式，然后开启
-* 进过测试，gzhu通过设置两个虚拟wan口网速最高可达到11mb/s下载，1.1mb/上传，但非常不稳定，且经常掉ping。比较稳定的虚拟wan个数是1，也就是双拨。尽管如此，掉ping的现象仍然存在(待研究）
+* 进过测试，gzhu通过设置3个虚拟wan口网速最高可达到11mb/s下载，1.1mb/上传，但非常不稳定，且经常掉ping。比较稳定的虚拟wan个数是1，也就是双拨。尽管如此，掉ping的现象仍然存在(待研究）
 
-开启虚拟wan后，在网络-接口页面可以看到多出来一个Vwan1(macvlan)，设置该接口为dhcp客户端模式，并应用。
+开启虚拟wan后，在网络-接口页面可以看到多出来一个Vwan1(macvlan1)，设置该接口为dhcp客户端模式，并应用。
+
 
